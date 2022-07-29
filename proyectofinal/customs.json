@@ -1,0 +1,18 @@
+{
+    "elements": {
+        "a": {},
+        "ul": {},
+        "li": {}
+    },
+    "attributes": {
+        "th:text": {
+            "context": "p"
+        },
+        "th:src": {
+            "context": "img"
+        },
+        "th:each": {
+            "context": "div"
+        }
+    }
+}

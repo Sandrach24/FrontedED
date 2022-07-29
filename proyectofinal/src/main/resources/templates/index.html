@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/Index.css" type="text/css"/>
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <title> Inicio</title> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,400;1,700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  
+
+    </head>
+    <body>
+
+        <header >
+            <div class="logo">
+                <img src="img/uide.png"  alt="Logo universidad">           
+         
+            <div class="header" id="inicio">
+
+            <nav class="menu-navegacion">
+                <a class="logo" href="#">
+                    <li <a href="http://localhost:7070">Inicio</a></li>
+                <li 
+
+                    <a href="equipos">Equipos</a>
+                    <ul class="menu-vertical">
+                        <li><a href="https://www.transfermarkt.es/real-madrid/startseite/verein/418">
+                                <p th:each="equipo:${equipos}"th:text="${equipo.nombres}">No existe </p>
+                            </a></li>
+                        <!--                    <li><a href="https://es.mancity.com/" >
+                                                    <p th:each="equipo:${equipos}"th:text="${equipo.nombres}">No existe</p>
+                                                        </a></li>
+                                            <li><a href="https://www.fcbarcelona.es/es/">
+                                                    <p th:each="equipo:${equipos}"th:text="${equipo.nombres}">No existe</p>
+                                                        </a></li>-->
+
+
+                    </ul>  
+                </li>
+                <li><a href="https://www.livesoccertv.com/es/schedules/">Partidos</a></li>
+                <li><a href="https://www.uide.edu.ec/">Contacto</a></li>
+                <li><a href="login.html">Login</a> </li>             
+            </nav>
+            </div>
+     
+            
+
+        </header>
+   
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="img/pinpong.jpg" class="d-block w-100" >
+                                                        
+                            <div class="carousel-caption d-none d-md-block">
+                                <font size ="20"<h5>Partido</h5></font>
+                                <font size= "6"> <p>POSEIDON VS ARES</p></font>
+                                <font size= "6"> <p>Fecha:22/08/2020</p></font>
+                                <font size= "6"> <p>Hora:14H00</p></font><!-- comment -->
+                            
+                            
+                              
+                             
+                            </div>
+                          </div>
+                            
+                            
+                          <div class="carousel-item">
+                            <img src="img/fut.jpg" class="d-block w-100" alt="50px">
+                            <div class="carousel-caption d-none d-md-block">
+                             <font size ="20"<h5>Partido</h5></font>
+                                <font size= "6"> <p>POSEIDON VS ARES</p></font>
+                                <font size= "6"> <p>Fecha:22/08/2020</p></font>
+                                <font size= "6"> <p>Hora:14H00</p></font>
+                            </div>
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/volley.jpg" class="d-block w-100" alt="50px">
+                            <div class="carousel-caption d-none d-md-block">
+                              <font size ="20"<h5>Partido</h5></font>
+                                <font size= "6"> <p>POSEIDON VS ARES</p></font>
+                                <font size= "6"> <p>Fecha:22/08/2020</p></font>
+                                <font size= "6"> <p>Hora:14H00</p></font>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+
+            <div class="col-4" th:each="equipo:${equipos}">
+                <div class="card" style="width: 100%;">
+                    <img src="/media/carrusel/imagen3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Equipos</h5>
+                      <p th:text="${equipo.nombres}">No existe </p>
+                     
+          
+                    <ul class="">
+                      <li class="list-group-item"></li>
+                      <li class="list-group-item ">Madrina:<p th:text="${equipo.madrina}">No existe</li>
+                      <li class="list-group-item">Representante:<p th:text="${equipo.representante}">No existe </p></li>
+                    </ul>
+                    </div>
+                    
+                </div>
+                <br>
+            </div>
+        
+          </div>
+            
+            
+
+    </div>
+        
+            
+                <section class="services contenedor" id="servicio">
+                </section>
+                <section class="gallery" id="portafolio">
+                    <div class="contenedor">
+                        <h2 class="subtitulos">Deportes</h2>
+                        <div class="contenedor-galeria">
+                            <img src="img/ajedrez.jpg" alt="" class="img-galeria">
+                            <img src="img/crosfit.jpg" alt="" class="img-galeria">
+                            <img src="img/bask.jpg" alt="" class="img-galeria">
+                            <img src="img/fut.jpg" alt="" class="img-galeria">
+                            <img src="img/pinpong.jpg" alt="" class="img-galeria">
+                            <img src="img/volley.jpg" alt="" class="img-galeria">
+
+                        </div>
+                  
+                </section>
+            </main>
+            <section class="imagen-light">
+                <img src="img/x.svg" alt="" class="close">
+                <img src="" alt="" class="agregar-imagen">
+            </section>
+            <section class="contenedor" id="expertos">
+                <h2 class="subtitulo">Expertos en:</h2>
+                <section class="experts">
+                    <div class="cont-expert">
+                        <img src="img/Fitness_Isometric.png" alt="">
+                        <h3 class="n-expert">Resistencia</h3>
+                    </div>
+                    <div class="cont-expert">
+                        <img src="img/Fitness_Monochromatic.png" alt="">
+                        <h3 class="n-expert">Rapidez</h3>
+                    </div>
+                    <div class="cont-expert">
+                        <img src="img/Fitness_Outline.png" alt="">
+                        <h3 class="n-expert">Fuerza</h3>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer id="contacto">
+            <div class="contenedor footer-content">
+                <div class="contact-us">
+                    <h2 class="brand">Contactos</h2>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/UIDELoja" class="social-media-icon">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <div class="social-media">
+                        <a href="https://twitter.com/UIDE?s=20&t=476tz6Q7Hv280qj-qbM0Ww" class="social-media-icon">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/uide.loja/?hl=es" class="social-media-icon">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </div>
+                    </div>  
+
+                    </footer>
+
+                    <script src="js/menu.js"></script>
+                    <script src="js/lightbox.js"></script>
+
+
+                    </body>
+                    </html>
